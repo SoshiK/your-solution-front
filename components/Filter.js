@@ -3,16 +3,6 @@ import styles from "../styles/Filter.module.css";
 export default function Filter(props) {
   const [selectedSpecialty, setSelectedSpecialty] = useState("All");
   const [selectedDay, setSelectedDay] = useState("All");
-  // const specialtyFilter = (e) => {
-  //   const specialty = e.target.value;
-  //   let filterdDoctors = props.allDoctors;
-  //   if (specialty !== "All") {
-  //     filterdDoctors = filterdDoctors.filter((doctor) => {
-  //       return doctor.specialty === specialty;
-  //     });
-  //   }
-  //   props.setDoctors(filterdDoctors);
-  // };
   useEffect(() => {
     let filterdDoctors = props.allDoctors;
     filterdDoctors = filterdDoctors.filter((doctor) => {
@@ -24,7 +14,6 @@ export default function Filter(props) {
       if (selectedSpecialty !== "All")
         return doctor.specialty === selectedSpecialty;
       if (selectedDay !== "All") {
-        console.log(selectedDay);
         return doctor.availability[selectedDay].length > 0;
       }
       return true;
@@ -37,7 +26,6 @@ export default function Filter(props) {
         name="specialty"
         size="1"
         className={styles.selectbox}
-        // onChange={specialtyFilter}
         onChange={(e) => {
           setSelectedSpecialty(e.target.value);
         }}

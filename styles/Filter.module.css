@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: 250px
+  top: 250px;
 }
 .selectbox {
   display: block;
@@ -13,4 +13,11 @@
   /* border: 1px solid #0a2e36; */
   border-radius: 5px;
 }
-
+@media (max-width: 600px) {
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 150px;
+  }
+}

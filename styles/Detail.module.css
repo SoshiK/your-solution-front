@@ -14,7 +14,6 @@
   line-height: 1.7;
   position: relative;
   top: 290px;
-  /* padding-bottom: 50px; */
 }
 .image {
   border-radius: 50%;
@@ -107,12 +106,8 @@
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 10px;
-    /* border-bottom: 1px solid black; */
-
-    /* width: 70vw; */
   }
   .avail {
-    /* border-top: 1px solid black; */
     margin-top: 20px;
     width: 70vw;
     display: flex;
@@ -147,10 +142,19 @@
     align-items: center;
     justify-content: center;
   }
-
   .daybtn:hover {
     background-color: #0a2e36;
     color: white;
     cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  .detail {
+    top: 170px;
+  }
+  .back,
+  .back:hover {
+    bottom: 0px;
+    right: 0px;
   }
 }

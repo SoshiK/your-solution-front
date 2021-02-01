@@ -28,15 +28,9 @@ const CheckoutForm = (props) => {
 };
 
 class CheckoutFormClass extends React.Component {
-  // dateView = () => {
-  //     return moment().add(7, "days").day(this.props.router.query.date).format("MM Do");
-  // }
   handlePayment = async (values) => {
-    // alert(JSON.stringify(values));
-
     const headers = new Headers();
     headers.set("Content-type", "application/json");
-    // headers.set('Access-Control-Allow-Origin', '*');
 
     //paymentIntentの作成を（ローカルサーバ経由で）リクエスト
     const responseJson = (
@@ -120,7 +114,6 @@ class CheckoutFormClass extends React.Component {
   };
 
   render() {
-    console.log(this.props.stripe);
     return (
       <div className={styles.container}>
           <div className={styles.picholder}>

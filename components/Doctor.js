@@ -5,7 +5,6 @@ export default function Doctor(props) {
     <div
       className={styles.doctor}
       onClick={() => {
-        //doctorsの配列から選ばれたdoctorの情報をindexを使って取り出す
         props.setIndex(props.index);
         props.setChangeView(false);
       }}
