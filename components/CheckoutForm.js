@@ -35,7 +35,7 @@ class CheckoutFormClass extends React.Component {
     //paymentIntentの作成を（ローカルサーバ経由で）リクエスト
     const responseJson = (
       await axios.post(
-        "https://your-solution-stg.herokuapp.com/createPaymentIntent",
+        "https://your-solution-back.herokuapp.com/createPaymentIntent",
         {
           amount: values.amount,
           username: values.username,
